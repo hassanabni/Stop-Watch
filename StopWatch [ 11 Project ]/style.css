@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.card {
+    width: 100%;
+    max-width: 430px;
+    margin: 100px auto;
+    background-color: black;
+    overflow: hidden; /* Prevents any potential overflow */
+}
+
+.bg-image {
+    position: relative;
+    width: 100%;
+    height: 260px; /* Ensures the container matches the image */
+}
+
+.bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures perfect fit */
+    display: block; /* Removes inline-block extra spacing */
+    opacity: 0.3;
+}
+.time{
+    position: absolute;
+    color: aliceblue;
+    z-index: 10;
+    font-size: 2.5rem;
+    top:100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px; /* Add padding for better aesthetics */
+    border-radius: 5px; /* Rounded corners for a smoother look */
+    line-height: 1px;
+}
+/* General button styling */
+.controls {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers buttons horizontally */
+    align-items: center; /* Centers buttons vertically */
+    gap: 20px; /* Adds spacing between buttons */
+    margin: 20px 0; /* Adds space above and below the control section */
+    position: relative;
+    bottom: 111px; /* Adjusts position relative to the card */
+}
+
+.btn {
+    display: flex; /* Ensures content inside buttons is centered */
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+    border-radius: 100%; /* Makes the buttons circular */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 1px solid white; /* Adds a white border */
+    background-color: white; /* Default background color for buttons */
+}
+
+/* Specific sizes for buttons */
+.play {
+    width: 66px; /* Larger size for play button */
+    height: 69px;
+    background-color: rgb(196, 8, 8); /* Play button specific color */
+}
+
+.stop, .refresh {
+    width: 50px; /* Smaller size for other buttons */
+    height: 50px;
+    background-color: white;
+}
+
+/* Styling for images inside buttons */
+.btn img {
+    width: 50%; /* Scales the image smaller inside the button */
+    height: 50%; /* Maintains proportion */
+    object-fit: contain; /* Ensures the image fits without distortion */
+}
